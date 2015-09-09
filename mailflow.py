@@ -14,7 +14,7 @@ def mailflow():
         envia=enviamail("mailflow@%s" %sys.argv[1])
         time.sleep(110)
         valida=checkmail()
-        # até 12 minnutos
+        # acima de 2 minutos
         if (str(valida) == "Erro-3"):
             time.sleep(230)
             valida=checkmail()
