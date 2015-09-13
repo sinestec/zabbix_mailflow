@@ -7,8 +7,8 @@ from limpamail import limpamail
 import time
 import sys
 
-limpamail()
 def mailflow():
+    limpamail()
     # executando o mailflow
     envia=enviamail("mailflow@%s" %sys.argv[1])
     time.sleep(10)
