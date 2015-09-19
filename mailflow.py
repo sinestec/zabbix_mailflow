@@ -4,15 +4,16 @@
 from enviamail import enviamail 
 from checkmail import checkmail
 from limpamail import limpamail
+from acesso import acesso
 import time
 import sys
 
 def mailflow():
-    limpamail()
+    limpamail(sys.argv[2],sys.argv[3])
     # executando o mailflow
     envia=enviamail("mailflow@%s" %sys.argv[1])
     time.sleep(10)
-    valida=checkmail()
+    valida=checkmail(sys.argv[2],sys.argv[3])
 	
     while (str(valida) == "Erro-3"):
     	time.sleep(5)

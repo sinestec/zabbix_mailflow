@@ -2,7 +2,7 @@
 #-=- encoding: utf-8 -=-
 
 
-def checkmail():
+def checkmail(imap,login):
     
     # bibliotecas
     import imaplib
@@ -13,8 +13,9 @@ def checkmail():
     FMT = '%H:%M:%S'
     try:
         # imap
-        mail = imaplib.IMAP4_SSL(acesso()[0])
-        mail.login(acesso()[1],acesso()[2])
+        mail = imaplib.IMAP4_SSL(imap)
+        #mail = imaplib.IMAP4_SSL(acesso()[0])
+        mail.login(login,acesso()[2])
         mail.list()
         mail.select("inbox") 
     except:

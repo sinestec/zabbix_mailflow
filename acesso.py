@@ -3,14 +3,16 @@
 
 # Abaixo defina os campos do banco de dados
 def acesso():
-	imap 		='imap.dominio.com.br'
+	imap 		='mail.sinestec.com.br'
         imaplogin	='mailflow'
-	imapsenha	='senha'
+	imapsenha	='senha@123'
 	smtp		='smtp.gmail.com'
 	smtpporta	='465'
-	smtplogin 	='login'
-	smtpmail	='login@gmail.com'
-	smtpsenha 	='senha'
+	smtplogin 	='mailflowsinestec'
+	smtpmail	='mailflowsinestec@gmail.com'
+	smtpsenha 	='SinesteC1@'
 
 	return imap, imaplogin, imapsenha, smtp, smtpporta, smtplogin, smtpmail, smtpsenha
 
+
+#print acesso('eva')
