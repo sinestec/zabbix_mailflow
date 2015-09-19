@@ -4,12 +4,12 @@
 
 def limpamail(imap,login):
     
-    # bibliotecas
+    # bibliotecas.
     import imaplib
     from datetime import datetime
     from acesso import acesso
     
-    # formato do horario 
+    # formato do horario. 
     FMT = '%H:%M:%S'
     try:
        # imap
@@ -20,12 +20,13 @@ def limpamail(imap,login):
     except:
         return "Erro-2"
 
-    # recebendo os dados do  último email
+    # recebendo os dados do  último email.
     resultado, dado = mail.search(None, "ALL")
     try:
     	ids = dado[0].split()
     	latest_email_id = ids[-1]
-    	# apagando o útlimo email
+
+    	# apagando o útlimo email.
     	mail.store(latest_email_id,'+FLAGS','\\Deleted')
     	mail.expunge()
     except:

@@ -1,18 +1,16 @@
 #!/usr/bin/python
 #-=- encoding: utf-8 -=-
 
-# Abaixo defina os campos do banco de dados
+# Abaixo defina as variáveis de acesso.
 def acesso():
-	imap 		='mail.sinestec.com.br'
-        imaplogin	='mailflow'
-	imapsenha	='senha@123'
+	imap 		=''
+        imaplogin	=''
+	imapsenha	='senha'
 	smtp		='smtp.gmail.com'
 	smtpporta	='465'
-	smtplogin 	='mailflowsinestec'
-	smtpmail	='mailflowsinestec@gmail.com'
-	smtpsenha 	='SinesteC1@'
+	smtplogin 	='login'
+	smtpmail	='login@gmail.com'
+	smtpsenha 	='Senha'
 
 	return imap, imaplogin, imapsenha, smtp, smtpporta, smtplogin, smtpmail, smtpsenha
 
-
-#print acesso('eva')
